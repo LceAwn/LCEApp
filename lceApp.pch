@@ -1,0 +1,60 @@
+//
+//  lceApp.pch
+//  LCEApp
+//
+//  Created by juziwl on 15/5/28.
+//  Copyright (c) 2015年 juziwl. All rights reserved.
+//
+
+#ifndef LCEApp_lceApp_pch
+#define LCEApp_lceApp_pch
+
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+
+#import "Utils.h"
+
+#import "UIView+XD.h"
+#import "MyControl.h"
+
+#import "AppDelegate.h"
+#import "headerFiles.h"
+
+#import "KYWaterWaveView.h"
+#import "KYWaterWaveView.h"
+
+#import "MGFashionMenuView.h"
+#import "MGFashionMenuView.h"
+
+#import "BaseViewController.h"
+#import "MainViewController.h"
+
+#import "LoginViewController.h"
+
+#import "UIView+MBIBnspectable.h"
+#import "UILabel+MBIBnsepectable.h"
+
+#endif
+
+//#ifdef DEBUG
+//# define NSLog(format, ...) NSLog((@"\n[文件名:%s]\n" "\n[函数名:%s]\n" "\n[行号:%d]\n" format), __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__);
+//#else
+//# define NSLog(...);
+//#endif
+//
+#ifdef DEBUG
+#define NSLog(format, ...) do {                                                             \
+fprintf(stderr, "\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n[文件名:%s]\n[行号:%d]\n[函数名:%s]\n输出结果:\n--->>\n",                                           \
+[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String],  \
+__LINE__, __func__);                                                        \
+(NSLog)((format), ##__VA_ARGS__);                                           \
+fprintf(stderr, "\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n");                                               \
+} while (0)
+#else
+#define NSLog(...)
+#endif
+
+
+
+#endif
